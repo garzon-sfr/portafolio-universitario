@@ -259,8 +259,44 @@ header {
     }
 }
 
-@media (max-width: 600px) {
-    .post {
-        grid-template-columns: 1fr;
+@media (max-width: 1060px) {
+    .container{
+        margin:  0 auto;
+        width: 95%;
     }
+    .home-text{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav{
+        padding: 14px 0;
+    }
+    .post-container{
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.footer p{
+    font-size: 0.938rem;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap:1rem ;
+}
+.social .bx{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.social .bx:hover{
+    color: var(--second-color);
+    transition: 0.3s all linear;
 }
