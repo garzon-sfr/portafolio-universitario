@@ -248,6 +248,84 @@ header {
     animation: fadeup 0.5s forwards;
 }
 
+/*perfil estudiante*/
+
+.cardPerfil {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 550px;
+    background: #9a9ba031;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 35px;
+    color: black;
+}
+.cardPerfil .img1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.cardPerfil p {
+    margin-top: 3px;
+    opacity: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.infoPerfil {
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background: #4140407c;
+    transition: all 0.3s ease;
+    line-height: 30px;
+}
+
+.namePerfil {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #f9f9f9;
+}
+
+.datePerfil {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #d1d1d1;
+}
+.cardPerfil:hover .img1 {
+    top: 20px;
+    height: 45%;
+    width: 85%;
+    border-radius: 3%;
+}
+
+.cardPerfil:hover p {
+    animation: fadeup 0.5s forwards;
+}
+
+.img2{
+    margin-top: 140px;
+}
+
+/*----------------*/
+
+
 @keyframes fadeup {
     from {
         opacity: 0;
