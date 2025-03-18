@@ -188,7 +188,7 @@ img:where(.astro-zetdm5md) {
 }
 img:where(.astro-zetdm5md):hover{
     transform: scale(1.2);
-    transition:.3s;
+    transition:.3s;     
 }
 
 h1:where(.astro-zetdm5md) {
@@ -196,7 +196,8 @@ h1:where(.astro-zetdm5md) {
 }
 
 h1:where(.astro-zetdm5md) span:where(.astro-zetdm5md) {
-    color: #00b2c1
+    color: #00b2c1;
+    font-size: 15px;
 }
 
 h2:where(.astro-zetdm5md) {
@@ -205,6 +206,6 @@ h2:where(.astro-zetdm5md) {
 }
 
 pre:where(.astro-zetdm5md) {
-    background: #00000062;
+    background: #0e0d0d62;
     padding: 1rem
 }
