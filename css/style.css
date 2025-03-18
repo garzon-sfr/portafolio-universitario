@@ -113,7 +113,8 @@ header {
 
 .home-subtitle {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 700;
+    text-shadow:  0 0 6px rgb(23, 48, 71), 0 0 12px rgb(25, 24, 29);
 }
 
 .post-filter {
