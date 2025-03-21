@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="nav container">
-            <h1><a href="/construccion.html" class="logo">Gar<span>Zon</span></a></h1>
+            <h1><a href="/index.html" class="logo">Gar<span>Zon</span></a></h1>
             <a class="Cpascual" href="https://pascualbravo.edu.co" target="_blank" rel="noopener noreferrer">
                 <img class="pascual" src="/images/pascual.png" alt="Icono Pascual">
             </a>
@@ -19,14 +19,52 @@
 
     <section class="home" id="home">
         <div class="home-text container">
-            <h2 class="home-title">Blog <b>Estudiantil</b></h2>
-            <span class="home-subtitle">Entrega de actividades universitarias y ejercicios prácticos personales.</span>
+            <h2 class="home-title">Algoritmos</h2>
+            <span class="home-subtitle">Resolución de Problemas a través de Algoritmos y Programación</span>
         </div>
     </section>
 
-    <section class="post container">
-            
-    </section>
+    <!-- Barra de Navegación Secundaria -->
+    <div class="post-filter container">
+        <button class="filter-item active" data-filter="induccion">Inducción</button>
+        <button class="filter-item" data-filter="mapa">Mapa Mental</button>
+        <button class="filter-item" data-filter="video">Video</button>
+    </div>
+
+    <!-- Sección de Inducción -->
+<section class="filter-content induccion container show" id="induccion">
+    <h2 class="section-title">Inducción</h2>
+    <p class="induccion-text">
+        Bienvenidos a este espacio dedicado al aprendizaje y desarrollo de habilidades en algoritmos, 
+        fundamentales para la resolución de problemas. En este blog presentaremos los trabajos realizados 
+        durante la materia de Algoritmos, abordando temas clave como la definición de un algoritmo, su correcta 
+        estructuración mediante diagramas de flujo y pseudocódigo, y su relevancia dentro de la programación.
+        <BR></BR>
+        A través de este sitio podrás explorar los contenidos trabajados en clase y consultar las evidencias de las actividades 
+        desarrolladas, fortaleciendo así la comprensión y aplicación de la lógica computacional en cada proyecto presentado.
+    </p>
+</section>
+
+<!--mapa -->
+<section class="filter-content mapa container hidden" id="mapa">
+    <h2 class="section-title">Mapa Mental Interactivo</h2>
+    <!-- Aquí va el mapa mental que ya armamos -->
+    <div id="mindmap"></div>
+</section>
+
+<!-- Sección para el Video desde YouTube -->
+<section class="filter-content video container hidden" id="video">
+    <h2 class="section-title">TIA 2. Practica <br> y algoritmos básicos</h2>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/tUuslOmgBAs" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+
+</section>
+
+
 <!-- redes sociales-->
     <footer class="footer container">
         <p>&#169; Derechos reservados de autor 2025</p>
@@ -36,6 +74,8 @@
             <a href="https://youtu.be/yj7w7XSIYLA" target="_blank"><i class='bx bxl-youtube' ></i></a>
             <a href="construccion.html" target="_blank"><i class='bx bxs-user-circle'></i></a>
         </div>
+</div>
     </footer> 
+    <script src="/js/algoritmos.js"></script>
 </body>
 </html>
