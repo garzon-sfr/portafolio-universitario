@@ -1,4 +1,4 @@
-// Filtros tipo tabs
+// filter nav
 const filterBtns = document.querySelectorAll(".filter-item");
 const sections = document.querySelectorAll(".filter-content");
 
@@ -22,3 +22,4 @@ filterBtns.forEach(btn => {
         });
     });
 });
+
