@@ -256,8 +256,37 @@ header {
     margin-top: 1.5rem;
     transition: all 0.4s ease;
 }
+.subtitulo-mapa {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.subtitulo-mapa span {
+    color: var(--second-color);
+    font-weight: 600;
+}
+
 
 /* Estilos para el iframe */
+#mindmap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background: #ffffff;
+}
+
 #mindmap iframe {
     position: absolute;
     top: 0;
@@ -266,12 +295,4 @@ header {
     height: 100%;
     border: none;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover efecto elegante */
-#mindmap:hover iframe {
-    transform: scale(1.01);
-    box-shadow: 0 0 20px rgba(0, 100, 171, 0.3);
 }
