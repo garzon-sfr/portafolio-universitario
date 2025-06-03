@@ -34,6 +34,7 @@
         <div class="post-filter container">
             <button class="filter-item active" data-filter="induccion">Inicio</button>
             <button class="filter-item" data-filter="mapa">Unidad #1</button>
+            <button class="filter-item" data-filter="unidad2">Unidad #2</button>
             <button class="filter-item" data-filter="video">Actividades</button>
         </div>
 
@@ -68,14 +69,468 @@
             </div>
         </section>
 
+        <!-- Sección Unidad 2 -->
+        <section class="filter-content unidad2 container hidden" id="unidad2">
+            <h2 class="section-title">Unidad 2</h2>
+            <div class="blog-entry">
+                <h3 class="blog-title">Utilización de estructuras repetitivas "Ciclos" y subprogramas</h3>
+                
+                <div class="blog-content">
+                    <h4>Introducción</h4>
+                    <p>
+                        Las estructuras repetitivas, también conocidas como ciclos o bucles, son fundamentales en la programación
+                        ya que permiten ejecutar un conjunto de instrucciones múltiples veces sin necesidad de escribir el código
+                        repetidamente. Junto con los subprogramas, forman la base para crear programas eficientes y modulares.
+                    </p>
+
+                    <h4>Tipos de Ciclos</h4>
+                    <div class="ciclo-tipo">
+                        <h5>1. Ciclo For (Para)</h5>
+                        <p>
+                            Se utiliza cuando conocemos el número exacto de iteraciones que queremos realizar.
+                            Es ideal para recorrer arreglos o ejecutar un bloque de código un número determinado de veces.
+                        </p>
+                        <div class="codigo-ejemplo">
+                            <pre>
+Para i desde 1 hasta 10 hacer
+    Escribir "Iteración número: ", i
+Fin Para
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="ciclo-tipo">
+                        <h5>2. Ciclo While (Mientras)</h5>
+                        <p>
+                            Se ejecuta mientras una condición sea verdadera. Es útil cuando no sabemos exactamente
+                            cuántas veces necesitamos repetir el código.
+                        </p>
+                        <div class="codigo-ejemplo">
+                            <pre>
+contador = 0
+Mientras contador < 5 hacer
+    Escribir "Contador: ", contador
+    contador = contador + 1
+Fin Mientras
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="ciclo-tipo">
+                        <h5>3. Ciclo Do-While (Hacer-Mientras)</h5>
+                        <p>
+                            Similar al While, pero garantiza que el código se ejecute al menos una vez,
+                            ya que la condición se evalúa al final.
+                        </p>
+                        <div class="codigo-ejemplo">
+                            <pre>
+Hacer
+    Escribir "Ingrese un número positivo: "
+    Leer numero
+Mientras numero <= 0
+                            </pre>
+                        </div>
+                    </div>
+
+                    <h4>Subprogramas</h4>
+                    <p>
+                        Los subprogramas son bloques de código reutilizables que realizan tareas específicas.
+                        Se dividen principalmente en dos tipos:
+                    </p>
+
+                    <div class="subprograma-tipo">
+                        <h5>Funciones</h5>
+                        <p>
+                            Son subprogramas que devuelven un valor después de realizar su tarea.
+                            Se utilizan cuando necesitamos calcular y retornar un resultado.
+                        </p>
+                        <div class="codigo-ejemplo">
+                            <pre>
+Función calcularPromedio(num1, num2, num3)
+    suma = num1 + num2 + num3
+    promedio = suma / 3
+    Retornar promedio
+Fin Función
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="subprograma-tipo">
+                        <h5>Procedimientos</h5>
+                        <p>
+                            Son subprogramas que ejecutan una serie de instrucciones pero no devuelven
+                            un valor. Se utilizan para realizar tareas específicas sin necesidad de retornar resultados.
+                        </p>
+                        <div class="codigo-ejemplo">
+                            <pre>
+Procedimiento mostrarMenu()
+    Escribir "1. Opción 1"
+    Escribir "2. Opción 2"
+    Escribir "3. Salir"
+Fin Procedimiento
+                            </pre>
+                        </div>
+                    </div>
+
+                    <h4>Bibliografía</h4>
+                    <div class="bibliografia">
+                        <ul>
+                            <li>
+                                (LIBRO)<strong>PROGRAMACIÓN ESTRUCTURADA: UN ENFOQUE ALGORÍTMICO</strong><br>
+                                <em>Autor:</em> López Román, Leobardo<br>
+                                <span class="ref-details">Este libro proporciona una base sólida en los conceptos fundamentales 
+                                de la programación estructurada, incluyendo el uso de estructuras repetitivas y subprogramas 
+                                para el desarrollo de algoritmos eficientes.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h4>Funciones en C++</h4>
+                    <p>
+                        En C++, las funciones son bloques de código reutilizables que realizan tareas específicas. 
+                        Una función puede recibir datos (parámetros), procesarlos y devolver un resultado. 
+                        C++ ofrece diferentes formas de pasar parámetros a las funciones.
+                    </p>
+
+                    <div class="cpp-section">
+                        <h5>Sintaxis Básica de una Función</h5>
+                        <div class="codigo-ejemplo">
+                            <pre>
+tipo_retorno nombre_funcion(tipo_parametro1 parametro1, tipo_parametro2 parametro2) {
+    // Cuerpo de la función
+    return valor; // opcional
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="cpp-section">
+                        <h5>Tipos de Parámetros en C++</h5>
+                        
+                        <div class="parametro-tipo">
+                            <h6>1. Paso por Valor</h6>
+                            <p>Se crea una copia del valor original. Los cambios en la función no afectan la variable original.</p>
+                            <div class="codigo-ejemplo">
+                                <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+void incrementarPorValor(int x) {
+    x = x + 1;
+    cout &lt;&lt; "Dentro de la función: " &lt;&lt; x &lt;&lt; endl;
+}
+
+int main() {
+    int numero = 5;
+    cout &lt;&lt; "Antes: " &lt;&lt; numero &lt;&lt; endl;
+    incrementarPorValor(numero);
+    cout &lt;&lt; "Después: " &lt;&lt; numero &lt;&lt; endl; // Sigue siendo 5
+    return 0;
+}
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="parametro-tipo">
+                            <h6>2. Paso por Referencia (&amp;)</h6>
+                            <p>Se pasa la dirección de memoria de la variable. Los cambios en la función SÍ afectan la variable original.</p>
+                            <div class="codigo-ejemplo">
+                                <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+void incrementarPorReferencia(int &amp;x) {
+    x = x + 1;
+    cout &lt;&lt; "Dentro de la función: " &lt;&lt; x &lt;&lt; endl;
+}
+
+int main() {
+    int numero = 5;
+    cout &lt;&lt; "Antes: " &lt;&lt; numero &lt;&lt; endl;
+    incrementarPorReferencia(numero);
+    cout &lt;&lt; "Después: " &lt;&lt; numero &lt;&lt; endl; // Ahora es 6
+    return 0;
+}
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="parametro-tipo">
+                            <h6>3. Paso por Puntero (*)</h6>
+                            <p>Se pasa la dirección de memoria usando punteros. Permite modificar la variable original.</p>
+                            <div class="codigo-ejemplo">
+                                <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+void incrementarPorPuntero(int *x) {
+    *x = *x + 1;
+    cout &lt;&lt; "Dentro de la función: " &lt;&lt; *x &lt;&lt; endl;
+}
+
+int main() {
+    int numero = 5;
+    cout &lt;&lt; "Antes: " &lt;&lt; numero &lt;&lt; endl;
+    incrementarPorPuntero(&amp;numero);
+    cout &lt;&lt; "Después: " &lt;&lt; numero &lt;&lt; endl; // Ahora es 6
+    return 0;
+}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ejemplo-completo">
+                        <h5>Ejemplo Completo: Calculadora con Referencias</h5>
+                        <p>Este ejemplo muestra cómo usar referencias para devolver múltiples valores desde una función:</p>
+                        <div class="codigo-ejemplo">
+                            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+// Función que calcula múltiples operaciones usando referencias
+void calculadora(double a, double b, double &amp;suma, double &amp;resta, 
+                double &amp;multiplicacion, double &amp;division) {
+    suma = a + b;
+    resta = a - b;
+    multiplicacion = a * b;
+    
+    if (b != 0) {
+        division = a / b;
+    } else {
+        division = 0; // Evitar división por cero
+        cout &lt;&lt; "¡Advertencia: División por cero!" &lt;&lt; endl;
+    }
+}
+
+// Función para intercambiar dos valores usando referencias
+void intercambiar(int &amp;x, int &amp;y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+int main() {
+    // Ejemplo 1: Calculadora
+    double num1 = 10.0, num2 = 3.0;
+    double resultado_suma, resultado_resta, resultado_mult, resultado_div;
+    
+    calculadora(num1, num2, resultado_suma, resultado_resta, 
+               resultado_mult, resultado_div);
+    
+    cout &lt;&lt; "=== CALCULADORA ===" &lt;&lt; endl;
+    cout &lt;&lt; num1 &lt;&lt; " + " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; resultado_suma &lt;&lt; endl;
+    cout &lt;&lt; num1 &lt;&lt; " - " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; resultado_resta &lt;&lt; endl;
+    cout &lt;&lt; num1 &lt;&lt; " * " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; resultado_mult &lt;&lt; endl;
+    cout &lt;&lt; num1 &lt;&lt; " / " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; resultado_div &lt;&lt; endl;
+    
+    // Ejemplo 2: Intercambio
+    int a = 5, b = 10;
+    cout &lt;&lt; "\n=== INTERCAMBIO ===" &lt;&lt; endl;
+    cout &lt;&lt; "Antes: a = " &lt;&lt; a &lt;&lt; ", b = " &lt;&lt; b &lt;&lt; endl;
+    intercambiar(a, b);
+    cout &lt;&lt; "Después: a = " &lt;&lt; a &lt;&lt; ", b = " &lt;&lt; b &lt;&lt; endl;
+    
+    return 0;
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="ventajas-referencias">
+                        <h5>Ventajas de usar Referencias</h5>
+                        <ul>
+                            <li><strong>Eficiencia:</strong> No se crean copias de los datos, especialmente útil con objetos grandes.</li>
+                            <li><strong>Modificación directa:</strong> Permite que la función modifique las variables originales.</li>
+                            <li><strong>Múltiples valores de retorno:</strong> Una función puede "devolver" varios valores modificando parámetros por referencia.</li>
+                            <li><strong>Sintaxis más limpia:</strong> Más fácil de leer que los punteros (no necesita * ni &amp;).</li>
+                        </ul>
+                    </div>
+
+                    <h4>Aplicación Práctica</h4>
+                    <p>
+                        La combinación de ciclos y subprogramas permite crear programas más organizados y eficientes.
+                        Por ejemplo, podemos usar un ciclo para procesar múltiples datos y una función para realizar
+                        cálculos específicos en cada iteración.
+                    </p>
+
+                    <div class="ejemplo-practico">
+                        <h5>Ejemplo: Calculadora de promedios</h5>
+                        <div class="codigo-ejemplo">
+                            <pre>
+Función calcularPromedio(numeros[], cantidad)
+    suma = 0
+    Para i desde 0 hasta cantidad-1 hacer
+        suma = suma + numeros[i]
+    Fin Para
+    Retornar suma / cantidad
+Fin Función
+
+Algoritmo Principal
+    Escribir "¿Cuántos números desea ingresar?"
+    Leer cantidad
+    
+    Dimension numeros[cantidad]
+    
+    Para i desde 0 hasta cantidad-1 hacer
+        Escribir "Ingrese el número ", i+1, ":"
+        Leer numeros[i]
+    Fin Para
+    
+    promedio = calcularPromedio(numeros, cantidad)
+    Escribir "El promedio es: ", promedio
+Fin Algoritmo
+                            </pre>
+                        </div>
+                    </div>
+
+                    <h4>Conclusión</h4>
+                    <p>
+                        El dominio de las estructuras repetitivas y los subprogramas es esencial para cualquier programador.
+                        Estas herramientas nos permiten escribir código más limpio, eficiente y mantenible, evitando la
+                        repetición innecesaria y promoviendo la modularidad en nuestros programas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Sección de Video -->
         <section class="filter-content video container hidden" id="video">
-            <h2 class="section-title">TIA 2. Practica <br> y algoritmos básicos</h2>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/Xz3tJ-WemVA" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
+            <h2 class="section-title">Actividades</h2>
+            
+            <!-- TIA 2 Video -->
+            <div class="actividad-item">
+                <h3 class="actividad-titulo">TIA 2. Unidad 1. Práctica y algoritmos básicos</h3>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Xz3tJ-WemVA" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- TIA 2 Taller Final -->
+            <div class="actividad-item">
+                <h3 class="actividad-titulo">TIA 2. Unidad 2. Taller Final: Mapa Mental y Algoritmo en C++</h3>
+                
+                <div class="actividad-contenido">
+                    <h4>Instrucciones de la Actividad</h4>
+                    <p class="instrucciones">
+                        <strong>Realice un mapa mental sobre la TIA 2. Taller Final:</strong> elaboración de un algoritmo 
+                        en el lenguaje de programación C++, el cual explique cómo se desarrolló su algoritmo. 
+                        Luego lleve el mapa creado a su blog portafolio con la etiqueta del curso Algoritmos.
+                    </p>
+
+                    <div class="mapa-genially">
+                        <h4>🧠 Mapa Mental Interactivo - TIA 2</h4>
+                        <p class="subtitulo-mapa">
+                            Explora el mapa mental interactivo que explica el desarrollo del algoritmo de audiencia televisiva en C++
+                        </p>
+                        <div style="width: 100%;">
+                            <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+                                <iframe title="MAPA MENTAL" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;" src="https://view.genially.com/683e379e6d24cdb988a3f2e9" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-tic2">
+                        <h4>🎥 Video Explicativo - TIA 2</h4>
+                        <p class="subtitulo-video">
+                            Video explicativo del desarrollo e implementación del algoritmo de audiencia televisiva
+                        </p>
+                        <video controls>
+                            <source src="/images/videoTia2.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento video.
+                        </video>
+                    </div>
+
+                    <h4>Problema Resuelto: Sistema de Análisis de Audiencia Televisiva</h4>
+                    <div class="problema-descripcion">
+                        <p><strong>Contexto:</strong> Una famosa cadena de televisión desea un programa que le permita conocer el tipo de audiencia que tiene en diferentes franjas horarias.</p>
+                        
+                        <h5>Franjas Horarias:</h5>
+                        <ul>
+                            <li><strong>Franja 1:</strong> Antes de las 14:00h</li>
+                            <li><strong>Franja 2:</strong> De 14:00h a 20:00h</li>
+                            <li><strong>Franja 3:</strong> De 20:00h a 22:00h</li>
+                            <li><strong>Franja 4:</strong> Después de las 22:00h</li>
+                        </ul>
+
+                        <h5>Grupos de Edad:</h5>
+                        <ul>
+                            <li><strong>Grupo 1:</strong> Menos de 30 años</li>
+                            <li><strong>Grupo 2:</strong> 30 años o más</li>
+                        </ul>
+                    </div>
+
+                    <h4>Funciones Implementadas</h4>
+                    <div class="funciones-lista">
+                        <div class="funcion-item">
+                            <h6>🔹 Incluir(A:AUDIENCIA; edad:entera; hora:T_hora)</h6>
+                            <p>Actualiza la estructura de audiencia con los datos de un televidente.</p>
+                        </div>
+
+                        <div class="funcion-item">
+                            <h6>🔹 Consulta(A:AUDIENCIA; franja:entera)</h6>
+                            <p>Devuelve el número de televidentes de una franja específica.</p>
+                        </div>
+
+                        <div class="funcion-item">
+                            <h6>🔹 Máximo(A:AUDIENCIA)</h6>
+                            <p>Devuelve la franja horaria con mayor audiencia.</p>
+                        </div>
+
+                        <div class="funcion-item">
+                            <h6>🔹 Conv_hora(h:T_hora)</h6>
+                            <p>Función auxiliar que convierte hora a franja horaria.</p>
+                        </div>
+
+                        <div class="funcion-item">
+                            <h6>🔹 Conv_edad(e:entera)</h6>
+                            <p>Función auxiliar que convierte edad a rango etario.</p>
+                        </div>
+                    </div>
+
+                    <h4>Ejemplo de Código Implementado</h4>
+                    <div class="codigo-ejemplo">
+                        <pre>
+// Estructura principal para almacenar audiencia
+struct AUDIENCIA {
+    int f1_menor = 0, f1_mayor = 0;  // Franja 1: < 14h
+    int f2_menor = 0, f2_mayor = 0;  // Franja 2: 14h-20h
+    int f3_menor = 0, f3_mayor = 0;  // Franja 3: 20h-22h
+    int f4_menor = 0, f4_mayor = 0;  // Franja 4: > 22h
+};
+
+// Función para determinar franja horaria
+int Conv_hora(int hora, int minuto) {
+    int total_min = hora * 60 + minuto;
+    
+    if (total_min < 14 * 60)       return 1;
+    else if (total_min < 20 * 60)  return 2;
+    else if (total_min < 22 * 60)  return 3;
+    else                           return 4;
+}
+
+// Función para actualizar audiencia
+void Incluir(AUDIENCIA &A, int edad, int hora, int minuto) {
+    int franja = Conv_hora(hora, minuto);
+    int grupo = Conv_edad(edad);
+    // Lógica de actualización de contadores...
+}
+                        </pre>
+                    </div>
+
+                    <div class="nota-importante">
+                        <h5>🎯 Objetivo de Aprendizaje</h5>
+                        <p>
+                            Este ejercicio integra conceptos fundamentales como <strong>estructuras de datos</strong>, 
+                            <strong>funciones con parámetros por referencia</strong>, <strong>validación de entrada</strong>, 
+                            y <strong>programación modular</strong>, demostrando la aplicación práctica de algoritmos 
+                            en la resolución de problemas reales.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
